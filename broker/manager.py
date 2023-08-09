@@ -1,58 +1,48 @@
-import asyncio
-
-from aiokafka import AIOKafkaProducer, AIOKafkaConsumer
+from celery import Celery
 
 
-class Kafka:
-    instance = None
+class CeleryConnector:
+    def __init__(self, broker_url, backend_url):
+        self.broker_url = broker_url
+        self.backend_url = backend_url
+        self._app = self.connect()
 
-    def __init__(self, port, host) -> None:
-        self.port = port
-        self.host = host
+    def connect(self):
+        self._app = Celery('tasks', broker=self.broker_url, backend=self.backend_url)
+        return self._app
 
     @property
-    def topic(self):
-        return self.topic
-
-    @topic.setter
-    def topic(self, value):
-        self.topic = value
+    def app(self):
+        print("app: ", self._app)
+        return self._app
 
 
-class KafkaProducer(Kafka):
-    def __init__(self, port, host) -> None:
-        super().__init__(port, host)
-        self.producer = AIOKafkaProducer(
-            bootstrap_servers=f"{self.host}:{self.port}",
-            loop=asyncio.get_event_loop(),
-        )
+class CeleryProducer:
+    def __init__(self, app):
+        self.app = app
 
-    async def connect(self):
-        await self.producer.start()
-
-    async def send(self, topic, message):
-        await self.producer.send_and_wait(topic, message.encode("utf-8"))
-
-    async def disconnect(self):
-        await self.producer.stop()
+    def send_task(self, task_name, *args, **kwargs):
+        task = self.app.send_task(task_name, args=args, kwargs=kwargs)
+        return task
 
 
-class KafkaConsumer(Kafka):
-    def __init__(self, port, host) -> None:
-        super().__init__(port, host)
-        self.consumer = AIOKafkaConsumer(
-            self.topic,
-            bootstrap_servers=f"{self.host}:{self.port}",
-            loop=asyncio.get_event_loop(),
-        )
+class CeleryConsumer:
+    def __init__(self, app, queue_name):
+        self.app = app
+        self.queue_name = queue_name
 
-    async def connect(self):
-        await self.consumer.start()
+    def start_consuming(self):
+        with self.app.connection() as connection:
+            worker = self.app.Worker(connection=connection, queues=[self.queue_name])
+            worker.start()
 
-    async def consume(self):
-        async for msg in self.consumer:
-            print("consumed: ", msg.topic, msg.partition, msg.offset,
-                  msg.key, msg.value, msg.timestamp)
 
-    async def disconnect(self):
-        await self.consumer.stop()
+if __name__ == '__main__':
+    celer = CeleryConnector(broker_url="redis://localhost:6379/0", backend_url="redis://localhost:6379/0")
+    celer.connect()
+
+    # producer = CeleryProducer(celer.app)
+    # producer.send_task("tasks.add", 1, 2)
+    #
+    consumer = CeleryConsumer(celer.app, "tasks")
+    consumer.start_consuming()
