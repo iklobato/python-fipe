@@ -1,4 +1,3 @@
-import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fuzzywuzzy.fuzz import ratio
