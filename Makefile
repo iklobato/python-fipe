@@ -19,11 +19,11 @@ build:
 
 run:
 	@echo "Running api"
-	minkube start
+	minikube start
 	eval $(minikube docker-env)
-	kubectl apply -f k8s/deployment.yaml
-	kubectl apply -f k8s/service.yaml
-
+	kubectl apply -f k8s/deployment.yml
+	kubectl apply -f k8s/service.yml
+	minikube dashboard
 
 stop:
 	minikube stop

@@ -47,7 +47,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: your-server-image:tag
+          image: server-api
           ports:
             - containerPort: 8000
           envFrom:
@@ -77,7 +77,7 @@ spec:
     spec:
       containers:
         - name: celery-worker
-          image: your-celery-worker-image:tag
+          image: celery-worker
           command: ["celery", "-A", "celery_app.celery_app", "worker", "--loglevel=info"]
           volumeMounts:
             - mountPath: /app
