@@ -10,6 +10,7 @@ services:
         volumes:
             - ./docker/nginx/nginx.conf:/etc/nginx/default.conf
             - static_volume:/app/backend/static
+
     server:
         restart: unless-stopped
         build:
@@ -17,28 +18,22 @@ services:
             dockerfile: ./docker/server.dockerfile
         volumes:
             - static_volume:/app/backend/static
-        expose:
-            - 8000
+        ports:
+            - "8000:8000"
         env_file:
             - .env
+        depends_on:
+            - nginx
 
     celery-worker:
         build:
             context: .
             dockerfile: ./docker/worker.dockerfile
-        command: celery -A celery_app worker --loglevel=info
+        command: celery -A celery_app.celery_app worker --loglevel=info
         volumes:
             - .:/app
         depends_on:
             - redis
-
-    celery-flower:
-        image: mher/flower:0.9.7
-        ports:
-            - "5555:5555"
-        command: flower --broker=redis://redis:6379 --port=5555
-        depends_on:
-            - celery-worker
 
     redis:
         restart: unless-stopped
