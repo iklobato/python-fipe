@@ -1,0 +1,108 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: /etc/nginx/default.conf
+              subPath: nginx.conf
+              name: nginx-config
+            - mountPath: /app/backend/static
+              name: static-volume
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: nginx-config
+        - name: static-volume
+          persistentVolumeClaim:
+            claimName: static-volume-claim
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+        - name: server
+          image: your-server-image:tag
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: server-env-config
+          volumeMounts:
+            - mountPath: /app/backend/static
+              name: static-volume
+      volumes:
+        - name: static-volume
+          persistentVolumeClaim:
+            claimName: static-volume-claim
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: celery-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: celery-worker
+  template:
+    metadata:
+      labels:
+        app: celery-worker
+    spec:
+      containers:
+        - name: celery-worker
+          image: your-celery-worker-image:tag
+          command: ["celery", "-A", "celery_app.celery_app", "worker", "--loglevel=info"]
+          volumeMounts:
+            - mountPath: /app
+              name: app-volume
+      volumes:
+        - name: app-volume
+          persistentVolumeClaim:
+            claimName: app-volume-claim
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+        - name: redis
+          image: redis:7.0.5-alpine
+          ports:
+            - containerPort: 6379
