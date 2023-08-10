@@ -1,46 +1,66 @@
 from datetime import datetime
-from sqlalchemy import Column, DateTime, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
+from pydantic import BaseModel
 
 Base = declarative_base()
 
 
-class BaseUpdatedModel(Base):
-    __abstract__ = True
+class BaseUpdateModel(BaseModel):
+    created_at: datetime = datetime.now()
+    updated_at: datetime = datetime.now()
 
-    created_at = Column(DateTime, nullable=False, default=datetime.now)
-    updated_at = Column(DateTime, nullable=False, default=datetime.now, onupdate=datetime.now)
+    def __init__(self, **data):
+        super().__init__(**data)
+        if 'id' in data:
+            self.update_updated = datetime.now()
 
-
-class Marca(BaseUpdatedModel):
-    __tablename__ = "marcas"
-
-    id = Column(Integer, primary_key=True)
-    nome = Column(String, nullable=False)
-    fipe_id = Column(Integer, nullable=False)
-    key = Column(String, nullable=False)
+    class Config:
+        orm_mode = True
 
 
-class Modelos(BaseUpdatedModel):
-    __tablename__ = "modelos"
+class Marca(BaseUpdateModel):
+    codigo: str
+    nome: str
 
-    id = Column(Integer, primary_key=True)
-    nome = Column(String, nullable=False)
-    fipe_id = Column(Integer, nullable=False)
-    marca_id = Column(Integer, ForeignKey('marcas.id'), nullable=False)
-    key = Column(String, nullable=False)
+    def __repr__(self):
+        return f"Marca(codigo={self.codigo}, nome={self.nome})"
 
-    marca = relationship('Marca')
+    class Config:
+        orm_mode = True
 
 
-class Anos(BaseUpdatedModel):
-    __tablename__ = "anos"
+class Modelo(BaseUpdateModel):
+    nome: str
+    codigo: int
 
-    id = Column(Integer, primary_key=True)
-    nome = Column(String, nullable=False)
-    fipe_id = Column(Integer, nullable=False)
-    modelo_id = Column(Integer, ForeignKey('modelos.id'), nullable=False)
-    key = Column(String, nullable=False)
+    def __repr__(self):
+        return f"Modelo(codigo={self.codigo}, nome={self.nome})"
 
-    modelo = relationship('Modelos')
+    class Config:
+        orm_mode = True
+
+
+class Ano(BaseUpdateModel):
+    codigo: str
+    nome: str
+
+    def __repr__(self):
+        return f"Ano(codigo={self.codigo}, nome={self.nome})"
+
+    class Config:
+        orm_mode = True
+
+
+class Valor(BaseUpdateModel):
+    tipo_veiculo: int
+    valor: str
+    marca: str
+    modelo: str
+    ano_modelo: int
+    combustivel: str
+    codigo_fipe: str
+    mes_referencia: str
+    sigla_combustivel: str
+
+    class Config:
+        orm_mode = True
