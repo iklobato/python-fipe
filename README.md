@@ -39,15 +39,15 @@ To run the FastAPI application, follow these steps:
 
 1. Activate the virtual environment:
 
-   ```bash
+```bash
    docker-compose up -d
- ```
+```
 
-1. Access the application's Swagger documentation by opening your web browser and navigating to:
+2. Access the application's Swagger documentation by opening your web browser and navigating to:
 
-   ```
-   http://localhost:8000/docs
-   ```
+```
+http://localhost:8000/docs
+```
 
 ## Usage
 
