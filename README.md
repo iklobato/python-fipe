@@ -12,7 +12,7 @@ make build
 
 This command will build the server API and Celery worker Docker images using the provided Dockerfiles.
 
-### Run
+### Running with kubernetes (Minikube)
 
 To run the project using Minikube:
 
@@ -28,6 +28,14 @@ To stop the project and Minikube:
 
 ```bash
 make stop
+```
+
+### Running with Docker Compose
+
+To run the project using Docker Compose:
+
+```bash
+make run-compose
 ```
 
 This command stops the Minikube cluster.
