@@ -41,7 +41,7 @@ To run the FastAPI application, follow these steps:
 
    ```bash
    docker-compose up -d
-2  ```
+ ```
 
 1. Access the application's Swagger documentation by opening your web browser and navigating to:
 
