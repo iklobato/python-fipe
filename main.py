@@ -1,6 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
+from fuzzywuzzy.fuzz import ratio
 
 from broker.tasks import load_data, DataLoader
 from config import (
@@ -33,9 +34,18 @@ async def fipe_marcas(limit: int = 10):
 
 
 @app.get("/api/marcas")
-async def fipe_marcas():
-    response = data_loader.load_marcas()
-    return response
+async def fipe_marcas(marca_nome: str = None):
+    """
+    Get all brands or filter by name
+    :param marca_nome: name of the brand
+    :return: list of car models belonging to the brand
+    """
+    if not marca_nome:
+        return data_loader.load_marcas()
+    result = data_loader.load_marcas()
+    result = [marca for marca in result if ratio(marca.get('nome'), marca_nome) > 80]
+    marca_id = result[0].get('codigo')
+    return data_loader.load_modelos(carro_id=marca_id)
 
 
 @app.patch("/api/marcas")
