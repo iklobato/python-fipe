@@ -1,31 +1,88 @@
 
-# FIPE API Kafka worker
+# FastAPI FIPE Data Loader
 
-This project provides a FastAPI-based API for fetching vehicle information using the FIPE service. It includes workers for fetching vehicle brands (marcas), models (modelos), years (anos), and values (valor) from the FIPE service. Kafka is used for managing asynchronous tasks and communication.
+This project is a FastAPI application that interacts with the FIPE (Fundação Instituto de Pesquisas Econômicas) API to load vehicle data into a database. It provides endpoints to load vehicle brand data from FIPE and access them through APIs.
 
-## Setup
+## Getting Started
 
-1. Clone this repository to your local machine.
-2. Install the required dependencies using:
+These instructions will help you set up and run the FastAPI application on your local machine.
+
+### Prerequisites
+
+Before running the application, make sure you have the following installed:
+
+- Python 3.7+
+- Pipenv (recommended for managing dependencies)
+
+### Installation
+
+1. Clone the repository to your local machine:
+
    ```bash
-   pip install -r requirements.txt
+   git clone <repository_url>
+   cd python-fipe
    ```
-3. Update the configuration in `config.py` to match your environment settings, such as FIPE API endpoints and Kafka connection details.
 
-## Running the API
+2. Install project dependencies using Pipenv:
 
-To run the API, execute the following command:
-```bash
-uvicorn main:app --host 0.0.0.0 --port 8000
+   ```bash
+   pipenv install
+   ```
+
+### Configuration
+
+1. Inside `config.py`, provide the necessary configuration values, such as `FIPE_BASE_URL`.
+
+### Running the Application
+
+To run the FastAPI application, follow these steps:
+
+1. Activate the virtual environment:
+
+   ```bash
+   docker-compose up -d
+2  ```
+
+1. Access the application's Swagger documentation by opening your web browser and navigating to:
+
+   ```
+   http://localhost:8000/docs
+   ```
+
+## Usage
+
+### Loading Data
+
+To load data from the FIPE API into the database, you can use the `/api/load` endpoint:
+
+```
+GET /api/load
 ```
 
-The API will be accessible at `http://localhost:8000`.
+You can provide the `limit` parameter to specify the number of data records to load. For example:
+    
+```
+GET /api/load?limit=10
+```
 
-## Endpoints
+### Retrieving Vehicle Brands
 
-- `GET /api/fipe/marcas`: Fetches vehicle brands from the FIPE service.
-- `GET /`: A simple health check endpoint returning the status as "ok".
+You can retrieve vehicle brand data using the following endpoints:
 
-## Workers and Kafka
+1. Retrieve all vehicle brands:
 
-The API utilizes workers for asynchronous data fetching from the FIPE service. Kafka is used to manage and coordinate these workers. Each worker corresponds to a specific type of data (marcas, modelos, anos, valor).
+   ```
+   GET /api/marcas
+   ```
+
+2. Partially update vehicle brands:
+
+   ```
+   PATCH /api/marcas
+   ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
