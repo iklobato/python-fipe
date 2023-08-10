@@ -52,8 +52,3 @@ async def fipe_marcas(marca_nome: str = None):
 async def fipe_marcas():
     response = data_loader.load_marcas()
     return response
-
-
-if __name__ == '__main__':
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-
