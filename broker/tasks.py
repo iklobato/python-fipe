@@ -44,32 +44,32 @@ class DataLoader:
     def camel_to_snake(self, s: str) -> str:
         return ''.join(['_' + c.lower() if c.isupper() else c for c in s]).lstrip('_')
 
+    def load_data_from_url(self, url: str) -> Dict:
+        result = request_url.delay(url)
+        return result.get(timeout=10)
+
     @lru_cache(maxsize=__cache_max_size)
     def load_marcas(self) -> List[Dict]:
         url = self.api.build_url(subpath=FIPE_API_MARCAS)
-        result = request_url.delay(url)
-        result = result.get(timeout=10)
+        result = self.load_data_from_url(url)
         return [{**marca} for marca in result]
 
     @lru_cache(maxsize=__cache_max_size)
     def load_modelos(self, carro_id: str) -> List[Dict]:
         url = self.api.build_url(subpath=FIPE_API_MODELOS, carro_id=carro_id)
-        result = request_url.delay(url)
-        result = result.get(timeout=10)
+        result = self.load_data_from_url(url)
         return [{**modelo} for modelo in result.get('modelos')]
 
     @lru_cache(maxsize=__cache_max_size)
     def load_anos(self, carro_id: str, modelo_id: int) -> List[Dict]:
         url = self.api.build_url(subpath=FIPE_API_ANOS, carro_id=carro_id, modelo_id=modelo_id)
-        result = request_url.delay(url)
-        result = result.get(timeout=10)
+        result = self.load_data_from_url(url)
         return [{**ano} for ano in result]
 
     @lru_cache(maxsize=__cache_max_size)
     def load_valores(self, carro_id: str, modelo_id: int, ano_id: str) -> List[Dict]:
         url = self.api.build_url(subpath=FIPE_API_VALOR, carro_id=carro_id, modelo_id=modelo_id, ano_id=ano_id)
-        result = request_url.delay(url)
-        result = [result.get(timeout=10)]
+        result = self.load_data_from_url(url)
         response = [{self.camel_to_snake(k): v for k, v in valor.items()} for valor in result]
         return response
 
