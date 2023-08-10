@@ -27,3 +27,6 @@ run:
 
 stop:
 	minikube stop
+
+run-compose:
+	docker-compose up -d
