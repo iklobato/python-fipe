@@ -10,5 +10,5 @@ FIPE_API_ANOS = os.getenv("FIPE_API_ANOS")
 FIPE_API_MODELOS = os.getenv("FIPE_API_MODELOS")
 FIPE_API_VALOR = os.getenv("FIPE_API_VALOR")
 
-KAFKA_HOST = os.getenv("KAFKA_HOST", "localhost")
-KAFKA_PORT = os.getenv("KAFKA_PORT", "9092")
+if not any([FIPE_BASE_URL, FIPE_API_MARCAS, FIPE_API_ANOS, FIPE_API_MODELOS, FIPE_API_VALOR]):
+    raise Exception("Missing FIPE URLs")
