@@ -1,6 +1,10 @@
+from functools import lru_cache
+from pprint import pprint
 from random import shuffle
+from typing import List, Dict
 
 from apis.base import SessionManager
+from apis.fipe import FipeApi
 from broker.celery_app import celery_app
 from config import (
     FIPE_BASE_URL,
@@ -9,6 +13,7 @@ from config import (
     FIPE_API_MODELOS,
     FIPE_API_VALOR,
 )
+from models.fipe import Marca, Modelo, Ano
 
 
 @celery_app.task(acks_late=True)
@@ -26,14 +31,47 @@ def request_url(url: str, params: dict = None, method: str = 'get') -> dict:
     return response.json()
 
 
-@celery_app.task(acks_late=True)
-def save_on_db(data: dict):
+class DataLoader:
     """
-    Saves data to the database
-    :param data: data to be saved
-    :return: status of the operation
+    Loads data from FIPE API to the database using Celery tasks.
     """
-    pass
+
+    __cache_max_size = 128
+
+    def __init__(self, api: FipeApi):
+        self.api = api
+
+    def camel_to_snake(self, s: str) -> str:
+        return ''.join(['_' + c.lower() if c.isupper() else c for c in s]).lstrip('_')
+
+    @lru_cache(maxsize=__cache_max_size)
+    def load_marcas(self) -> List[Dict]:
+        url = self.api.build_url(subpath=FIPE_API_MARCAS)
+        result = request_url.delay(url)
+        result = result.get(timeout=10)
+        return [{**marca} for marca in result]
+
+    @lru_cache(maxsize=__cache_max_size)
+    def load_modelos(self, carro_id: str) -> List[Dict]:
+        url = self.api.build_url(subpath=FIPE_API_MODELOS, carro_id=carro_id)
+        result = request_url.delay(url)
+        result = result.get(timeout=10)
+        return [{**modelo} for modelo in result.get('modelos')]
+
+    @lru_cache(maxsize=__cache_max_size)
+    def load_anos(self, carro_id: str, modelo_id: int) -> List[Dict]:
+        url = self.api.build_url(subpath=FIPE_API_ANOS, carro_id=carro_id, modelo_id=modelo_id)
+        result = request_url.delay(url)
+        result = result.get(timeout=10)
+        return [{**ano} for ano in result]
+
+    @lru_cache(maxsize=__cache_max_size)
+    def load_valores(self, carro_id: str, modelo_id: int, ano_id: str) -> List[Dict]:
+        url = self.api.build_url(subpath=FIPE_API_VALOR, carro_id=carro_id, modelo_id=modelo_id, ano_id=ano_id)
+        result = request_url.delay(url)
+        result = [result.get(timeout=10)]
+        response = [{self.camel_to_snake(k): v for k, v in valor.items()} for valor in result]
+        return response
 
 
 def load_data(limit: int = 100):
@@ -42,42 +80,39 @@ def load_data(limit: int = 100):
     :param limit: limit of data to be loaded
     :return: status of the operation
     """
-    def load_marcas():
-        url = f"{FIPE_BASE_URL}{FIPE_API_MARCAS}"
-        result = request_url.delay(url)
-        return [{"marca": marca["nome"], "marca_id": marca["codigo"]} for marca in result.get()]
+    fipe_base_api = FipeApi(base_url=FIPE_BASE_URL)
+    data_loader = DataLoader(fipe_base_api)
 
-    def load_modelos(carro_id: int):
-        url = f"{FIPE_BASE_URL}{FIPE_API_MODELOS}"
-        url = url.format(carro_id=carro_id)
-        result = request_url.delay(url)
-        return [{"modelo": modelo["nome"], "modelo_id": modelo["codigo"]} for modelo in result.get()]
-
-    def load_anos(carro_id: int, modelo_id: int):
-        url = f"{FIPE_BASE_URL}{FIPE_API_ANOS}"
-        url = url.format(carro_id=carro_id, modelo_id=modelo_id)
-        result = request_url.delay(url)
-        return [{"ano": ano["nome"], "ano_id": ano["codigo"]} for ano in result.get()]
-
-    def load_valores(carro_id: int, modelo_id: int, ano_id: int):
-        url = f"{FIPE_BASE_URL}{FIPE_API_VALOR}"
-        url = url.format(carro_id=carro_id, modelo_id=modelo_id, ano_id=ano_id)
-        result = request_url.delay(url)
-        return [{"valor": valor["Valor"], "mes_referencia": valor["MesReferencia"], "combustivel": valor["Combustivel"]} for valor in result.get()]
-
-    sample = load_marcas()
+    sample = data_loader.load_marcas()
     shuffle(sample)
     total = 0
     for marca in sample:
-        marca_id = marca["marca_id"]
-        modelos = load_modelos(marca_id)
+        marca_obj = Marca(**marca)
+        modelos = data_loader.load_modelos(marca_obj.codigo)
+        shuffle(modelos)
         for modelo in modelos:
-            modelo_id = modelo["modelo_id"]
-            anos = load_anos(marca_id, modelo_id)
+            modelo_obj = Modelo(**modelo)
+            anos = data_loader.load_anos(marca_obj.codigo, modelo_obj.codigo)
+            shuffle(anos)
             for ano in anos:
-                ano_id = ano["ano_id"]
-                valores = load_valores(marca_id, modelo_id, ano_id)
+                ano_obj = Ano(**ano)
+                valores = data_loader.load_valores(marca_obj.codigo, modelo_obj.codigo, ano_obj.codigo)
                 for valor in valores:
                     total += 1
+                    pprint(
+                        {
+                            "marca": marca_obj,
+                            "modelo": modelo_obj,
+                            "ano": ano_obj,
+                            "valor": valor,
+                        }
+                    )
                     if total >= limit:
-                        return {"status": "ok"}
+                        return True
+
+
+if __name__ == '__main__':
+    # request_url.delay = request_url  # monkey patching to make it work with __main__
+    # request_url.get = lambda self: self.get(timeout=10)
+
+    load_data(limit=1)
