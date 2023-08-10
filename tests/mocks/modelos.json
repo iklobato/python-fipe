@@ -1,0 +1,1126 @@
+{
+	"modelos": [
+		{
+			"codigo": 2204,
+			"nome": "Avalon XLS 3.0"
+		},
+		{
+			"codigo": 2205,
+			"nome": "Band. Jipe 4x4 Sport 3.7 Diesel"
+		},
+		{
+			"codigo": 2206,
+			"nome": "Band.Jipe Cap.de Aço Chas. Curto Diesel"
+		},
+		{
+			"codigo": 2207,
+			"nome": "Band.Jipe Cap.de Aço Chas. Longo Diesel"
+		},
+		{
+			"codigo": 2208,
+			"nome": "Band.Jipe Capota de Lona Diesel"
+		},
+		{
+			"codigo": 2209,
+			"nome": "Band.Picape CD 2p Chassi Longo Diesel"
+		},
+		{
+			"codigo": 2210,
+			"nome": "Band.Picape CD 4p Chassi Longo Diesel"
+		},
+		{
+			"codigo": 2211,
+			"nome": "Band.Picape Chassi Curto Diesel"
+		},
+		{
+			"codigo": 2212,
+			"nome": "Band.Picape Chassi Longo Diesel"
+		},
+		{
+			"codigo": 2213,
+			"nome": "Camry LE"
+		},
+		{
+			"codigo": 2214,
+			"nome": "Camry SW LE 2.2 16V"
+		},
+		{
+			"codigo": 2215,
+			"nome": "Camry SW XLE 3.0 24V"
+		},
+		{
+			"codigo": 9969,
+			"nome": "Camry XLE  2.5 16V Aut. (Híbrido)"
+		},
+		{
+			"codigo": 2216,
+			"nome": "Camry XLE 3.0 24V 186cv"
+		},
+		{
+			"codigo": 4091,
+			"nome": "Camry XLE 3.5 24V Aut."
+		},
+		{
+			"codigo": 2217,
+			"nome": "Celica GT 2.2 16V"
+		},
+		{
+			"codigo": 2218,
+			"nome": "Celica ST 1.8"
+		},
+		{
+			"codigo": 9984,
+			"nome": "Corolla Altis 1.8 16V Aut. (Híbrido)"
+		},
+		{
+			"codigo": 9985,
+			"nome": "Corolla Altis Prem. 1.8 Aut. (Híbrido)"
+		},
+		{
+			"codigo": 9300,
+			"nome": "Corolla ALTIS/A.Premiu. 2.0 Flex 16V Aut"
+		},
+		{
+			"codigo": 9787,
+			"nome": "Corolla Cross GR-S 2.0 16V Flex Aut."
+		},
+		{
+			"codigo": 9324,
+			"nome": "Corolla Cross SE 1.8 16V Aut. (Híbrido)"
+		},
+		{
+			"codigo": 9325,
+			"nome": "Corolla Cross XR 2.0 16V Flex Aut."
+		},
+		{
+			"codigo": 9326,
+			"nome": "Corolla Cross XRE 2.0 16V Flex Aut."
+		},
+		{
+			"codigo": 9986,
+			"nome": "Corolla Cross XRV 1.8 16V Aut. (Híbrido)"
+		},
+		{
+			"codigo": 9987,
+			"nome": "Corolla Cross XRX 1.8 16V Aut. (Híbrido)"
+		},
+		{
+			"codigo": 2220,
+			"nome": "Corolla DX/ SW DX 1.6 16V"
+		},
+		{
+			"codigo": 7746,
+			"nome": "Corolla Dynamic 2.0 Flex 16V Aut."
+		},
+		{
+			"codigo": 2221,
+			"nome": "Corolla Fielder SW 1.8/1.8 XEi Flex Aut."
+		},
+		{
+			"codigo": 2222,
+			"nome": "Corolla Fielder SW 1.8/1.8 XEi Flex Mec"
+		},
+		{
+			"codigo": 4166,
+			"nome": "Corolla Fielder SW S  1.8 16V 136cv Aut"
+		},
+		{
+			"codigo": 4167,
+			"nome": "Corolla Fielder SW S 1.8 16V 136cv Mec"
+		},
+		{
+			"codigo": 4348,
+			"nome": "Corolla Fielder SW SE-G 1.8 Flex 16V Aut"
+		},
+		{
+			"codigo": 2219,
+			"nome": "Corolla GLi 1.6 16V"
+		},
+		{
+			"codigo": 5041,
+			"nome": "Corolla GLi 1.8 Flex 16V  Aut."
+		},
+		{
+			"codigo": 5042,
+			"nome": "Corolla GLi 1.8 Flex 16V Mec."
+		},
+		{
+			"codigo": 8839,
+			"nome": "Corolla GLi 2.0 16V Flex Aut."
+		},
+		{
+			"codigo": 7214,
+			"nome": "Corolla GLi Upper 1.8 Flex 16V Aut."
+		},
+		{
+			"codigo": 7558,
+			"nome": "Corolla GLi Upper Black P. 1.8 Flex Aut."
+		},
+		{
+			"codigo": 10751,
+			"nome": "Corolla GR Circuit 1.6 Turbo 4x4 Mec"
+		},
+		{
+			"codigo": 10752,
+			"nome": "Corolla GR Core 1.6 Turbo 4x4 Mec"
+		},
+		{
+			"codigo": 9301,
+			"nome": "Corolla GR-Sport 2.0 Flex 16V Aut."
+		},
+		{
+			"codigo": 2223,
+			"nome": "Corolla LE 1.8"
+		},
+		{
+			"codigo": 2224,
+			"nome": "Corolla LE 2.2 16V"
+		},
+		{
+			"codigo": 4168,
+			"nome": "Corolla S 1.8 16V 136cv Aut"
+		},
+		{
+			"codigo": 4169,
+			"nome": "Corolla S 1.8 16V 136cv Mec"
+		},
+		{
+			"codigo": 2226,
+			"nome": "Corolla SE-G 1.8 16V Mec."
+		},
+		{
+			"codigo": 2225,
+			"nome": "Corolla SE-G 1.8/1.8 Flex 16V Aut."
+		},
+		{
+			"codigo": 2227,
+			"nome": "Corolla SW LE 1.8/ XLi 1.6 16V"
+		},
+		{
+			"codigo": 2228,
+			"nome": "Corolla WG"
+		},
+		{
+			"codigo": 2229,
+			"nome": "Corolla XEi 1.8/1.8 Flex 16V Aut."
+		},
+		{
+			"codigo": 2230,
+			"nome": "Corolla XEi 1.8/1.8 Flex 16V Mec."
+		},
+		{
+			"codigo": 5194,
+			"nome": "Corolla XEi 2.0 Flex 16V Aut."
+		},
+		{
+			"codigo": 2231,
+			"nome": "Corolla XLi 1.6 16V 110cv Aut."
+		},
+		{
+			"codigo": 2232,
+			"nome": "Corolla XLi 1.6 16V 110cv Mec."
+		},
+		{
+			"codigo": 2233,
+			"nome": "Corolla XLi 1.8/1.8 Flex 16V Aut."
+		},
+		{
+			"codigo": 2234,
+			"nome": "Corolla XLi 1.8/1.8 Flex 16V Mec."
+		},
+		{
+			"codigo": 5939,
+			"nome": "Corolla XRS 2.0 Flex 16V Aut."
+		},
+		{
+			"codigo": 2235,
+			"nome": "Corona Aut."
+		},
+		{
+			"codigo": 2236,
+			"nome": "Corona GLi Mec"
+		},
+		{
+			"codigo": 2237,
+			"nome": "Corona Mec."
+		},
+		{
+			"codigo": 6245,
+			"nome": "ETIOS 1.3 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 7559,
+			"nome": "ETIOS CROSS 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 6651,
+			"nome": "ETIOS CROSS 1.5 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 7711,
+			"nome": "ETIOS PLATINUM 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 6872,
+			"nome": "ETIOS PLATINUM 1.5 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 7712,
+			"nome": "ETIOS PLATINUM Sed. 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 6873,
+			"nome": "ETIOS PLATINUM Sed. 1.5 Flex 16V 4p Mec."
+		},
+		{
+			"codigo": 7747,
+			"nome": "ETIOS READY! 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 7560,
+			"nome": "ETIOS X 1.3 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 6246,
+			"nome": "ETIOS X 1.3 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 8249,
+			"nome": "ETIOS X Plus 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8250,
+			"nome": "ETIOS X Plus 1.5 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 8251,
+			"nome": "ETIOS X Plus Sedan 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 8252,
+			"nome": "ETIOS X Plus Sedan 1.5 Flex 16V 4p Mec."
+		},
+		{
+			"codigo": 7561,
+			"nome": "ETIOS X Sedan 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 6247,
+			"nome": "ETIOS X Sedan 1.5 Flex 16V 4p Mec."
+		},
+		{
+			"codigo": 6248,
+			"nome": "ETIOS XLS 1.5 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 7562,
+			"nome": "ETIOS XLS 1.5 Flex 5p Aut."
+		},
+		{
+			"codigo": 7563,
+			"nome": "ETIOS XLS Sedan 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 6249,
+			"nome": "ETIOS XLS Sedan 1.5 Flex 16V 4p Mec."
+		},
+		{
+			"codigo": 6250,
+			"nome": "ETIOS XS  1.3 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 7564,
+			"nome": "ETIOS XS 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 6598,
+			"nome": "ETIOS XS 1.5 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 7565,
+			"nome": "ETIOS XS Sedan 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 6251,
+			"nome": "ETIOS XS Sedan1.5 Flex 16V 4p Mec."
+		},
+		{
+			"codigo": 2238,
+			"nome": "Hilux 4x2 2.4 Diesel"
+		},
+		{
+			"codigo": 2239,
+			"nome": "Hilux 4x2 2.8 Diesel"
+		},
+		{
+			"codigo": 2240,
+			"nome": "Hilux CD 4x2 2.4 Diesel"
+		},
+		{
+			"codigo": 6310,
+			"nome": "Hilux CD 4x4 2.7 16V Flex Mec."
+		},
+		{
+			"codigo": 2241,
+			"nome": "Hilux CD 4x4 2.8 Diesel Mec."
+		},
+		{
+			"codigo": 10171,
+			"nome": "Hilux CD Conquest 4x4 2.8  Die.Aut"
+		},
+		{
+			"codigo": 2242,
+			"nome": "Hilux CD D4-D 4x2 2.5 16V 102cv TB Dies."
+		},
+		{
+			"codigo": 2243,
+			"nome": "Hilux CD D4-D 4x4 2.5 16V 102cv TB Dies."
+		},
+		{
+			"codigo": 6076,
+			"nome": "Hilux CD D4-D 4x4 3.0 TDI Dies. Mec."
+		},
+		{
+			"codigo": 2244,
+			"nome": "Hilux CD DLX 4x2 2.8 Diesel"
+		},
+		{
+			"codigo": 2245,
+			"nome": "Hilux CD DLX 4x4 2.8 Diesel"
+		},
+		{
+			"codigo": 2246,
+			"nome": "Hilux CD DX 4x2 2.7 16V 142cv"
+		},
+		{
+			"codigo": 2247,
+			"nome": "Hilux CD DX 4x2 3.0 8V 90cv Diesel"
+		},
+		{
+			"codigo": 2248,
+			"nome": "Hilux CD DX 4x4 3.0 8V 90cv Diesel"
+		},
+		{
+			"codigo": 8554,
+			"nome": "Hilux CD GR-S 4x4 2.8 TDI Dies. Aut."
+		},
+		{
+			"codigo": 9026,
+			"nome": "Hilux CD GR-S 4x4 4.0 V6 234cv Aut."
+		},
+		{
+			"codigo": 7076,
+			"nome": "Hilux CD Limited 4x4 3.0 TDI Diesel Aut."
+		},
+		{
+			"codigo": 5081,
+			"nome": "Hilux CD SR 4x2 2.7 16V/2.7 Flex Aut."
+		},
+		{
+			"codigo": 4804,
+			"nome": "Hilux CD SR 4x2 2.7 16V/2.7 Flex Mec."
+		},
+		{
+			"codigo": 7405,
+			"nome": "Hilux CD SR 4x4 2.8 TDI Diesel Aut."
+		},
+		{
+			"codigo": 2249,
+			"nome": "Hilux CD SR 4x4 3.0 8V 116cv TB Diesel"
+		},
+		{
+			"codigo": 2250,
+			"nome": "Hilux CD SR 4x4 3.0 8V 90cv Diesel"
+		},
+		{
+			"codigo": 8110,
+			"nome": "Hilux CD SR CHALL. 4x4 2.8 TDI Dies Aut."
+		},
+		{
+			"codigo": 2251,
+			"nome": "Hilux CD SR D4-D 4x2 3.0 163cv TDI Dies."
+		},
+		{
+			"codigo": 2252,
+			"nome": "Hilux CD SR D4-D 4x4 3.0  TDI Dies."
+		},
+		{
+			"codigo": 6036,
+			"nome": "Hilux CD SR D4-D 4x4 3.0 TDI Dies Aut."
+		},
+		{
+			"codigo": 2253,
+			"nome": "Hilux CD SR5 4x4 2.8 Diesel"
+		},
+		{
+			"codigo": 2254,
+			"nome": "Hilux CD SRV 4x2 2.7 16V 142cv"
+		},
+		{
+			"codigo": 7046,
+			"nome": "Hilux CD SRV 4x2 2.7 Flex 16V Aut."
+		},
+		{
+			"codigo": 2255,
+			"nome": "Hilux CD SRV 4x2 3.0 8V 90cv Diesel"
+		},
+		{
+			"codigo": 5907,
+			"nome": "Hilux CD SRV 4x4 2.7 Flex 16V Aut."
+		},
+		{
+			"codigo": 7406,
+			"nome": "Hilux CD SRV 4x4 2.8 TDI Diesel Aut."
+		},
+		{
+			"codigo": 2256,
+			"nome": "Hilux CD SRV 4x4 3.0 8V 116cv TB Diesel"
+		},
+		{
+			"codigo": 2257,
+			"nome": "Hilux CD SRV D4-D 4x2 3.0 163cv TDI Dies"
+		},
+		{
+			"codigo": 2258,
+			"nome": "Hilux CD SRV D4-D 4x4 3.0  TDI Dies"
+		},
+		{
+			"codigo": 2259,
+			"nome": "Hilux CD SRV D4-D 4x4 3.0 TDI Diesel Aut"
+		},
+		{
+			"codigo": 7407,
+			"nome": "Hilux CD SRX 4x4 2.8 TDI 16V Diesel Aut."
+		},
+		{
+			"codigo": 10172,
+			"nome": "Hilux CD SRX Limited 4x4 2.8 TDI Die.Aut"
+		},
+		{
+			"codigo": 7408,
+			"nome": "Hilux Chassi 4x4 2.8 TDI Diesel Mec."
+		},
+		{
+			"codigo": 2260,
+			"nome": "Hilux Chassi D4-D 4x4 2.5 102cv TB Dies."
+		},
+		{
+			"codigo": 6037,
+			"nome": "Hilux Chassi D4-D 4x4 3.0 TDI Dies. Mec."
+		},
+		{
+			"codigo": 2261,
+			"nome": "Hilux CS 4x4 2.4 Diesel"
+		},
+		{
+			"codigo": 7409,
+			"nome": "Hilux CS 4x4 2.8 TDI Diesel Mec."
+		},
+		{
+			"codigo": 2262,
+			"nome": "Hilux CS D4-D 4x2 2.5 16V 102cv TB Dies."
+		},
+		{
+			"codigo": 2263,
+			"nome": "Hilux CS D4-D 4x4 2.5 16V 102cv TB Dies."
+		},
+		{
+			"codigo": 6038,
+			"nome": "Hilux CS D4-D 4x4 3.0 TDI Dies. Mec."
+		},
+		{
+			"codigo": 2264,
+			"nome": "Hilux CS DLX 4x2 2.8 Diesel"
+		},
+		{
+			"codigo": 2265,
+			"nome": "Hilux CS DLX 4x4 2.8 Diesel"
+		},
+		{
+			"codigo": 2266,
+			"nome": "Hilux CS DX 4x2 2.7 16V 142cv"
+		},
+		{
+			"codigo": 2267,
+			"nome": "Hilux CS DX 4x2 3.0 8V 90cv Diesel"
+		},
+		{
+			"codigo": 2268,
+			"nome": "Hilux CS DX 4x4 3.0 8V 90cv Diesel"
+		},
+		{
+			"codigo": 2269,
+			"nome": "Hilux CS SR5 4x4 2.8 Diesel"
+		},
+		{
+			"codigo": 2270,
+			"nome": "Hilux CS SRV 4x2 2.7 16V 142cv"
+		},
+		{
+			"codigo": 2271,
+			"nome": "Hilux SW4 2.7 16V"
+		},
+		{
+			"codigo": 2272,
+			"nome": "Hilux SW4 3.4 V6"
+		},
+		{
+			"codigo": 2273,
+			"nome": "Hilux SW4 4x4 2.4 8V"
+		},
+		{
+			"codigo": 2274,
+			"nome": "Hilux SW4 4x4 2.8 Diesel"
+		},
+		{
+			"codigo": 2275,
+			"nome": "Hilux SW4 4x4 3.0 12V V6"
+		},
+		{
+			"codigo": 2276,
+			"nome": "Hilux SW4 4x4 3.0 24V V6"
+		},
+		{
+			"codigo": 2277,
+			"nome": "Hilux SW4 4x4 3.0 8V TB Diesel"
+		},
+		{
+			"codigo": 9662,
+			"nome": "Hilux SW4 Diamond 2.8 TB 4x4 Die. Aut."
+		},
+		{
+			"codigo": 9663,
+			"nome": "Hilux SW4 GRS 2.8 TB 4x4 Diesel Aut."
+		},
+		{
+			"codigo": 4906,
+			"nome": "Hilux SW4 SR 4x2 2.7/ 2.7 Flex 16V Aut."
+		},
+		{
+			"codigo": 4905,
+			"nome": "Hilux SW4 SR 4x2 2.7/2.7 Flex 16V Mec."
+		},
+		{
+			"codigo": 6077,
+			"nome": "Hilux SW4 SR D4-D 4x4 3.0 TDI Dies. Aut"
+		},
+		{
+			"codigo": 8111,
+			"nome": "Hilux SW4 SRV 4x2 2.7 Flex 16V Aut."
+		},
+		{
+			"codigo": 4907,
+			"nome": "Hilux SW4 SRV 4x4 4.0 V6 24V Aut."
+		},
+		{
+			"codigo": 3830,
+			"nome": "Hilux SW4 SRV D4-D 4x4 3.0 TDI Dies. Aut"
+		},
+		{
+			"codigo": 3831,
+			"nome": "Hilux SW4 SRV D4-D 4x4 3.0 TDI Dies. Mec"
+		},
+		{
+			"codigo": 7491,
+			"nome": "Hilux SW4 SRX 4x4 2.8 TDI 16V Dies. Aut."
+		},
+		{
+			"codigo": 7492,
+			"nome": "Hilux SW4 SRX 4x4 4.0 V6 24V Aut."
+		},
+		{
+			"codigo": 8299,
+			"nome": "Hilux SW4 SRX Diamo. 4x4 2.8 TB Die Aut."
+		},
+		{
+			"codigo": 2278,
+			"nome": "Land Cruiser 4WD 4.5 24V"
+		},
+		{
+			"codigo": 2279,
+			"nome": "Land Cruiser Prado 3.0 4x4 TB Diesel Aut"
+		},
+		{
+			"codigo": 2280,
+			"nome": "Land Cruiser Prado 3.0 4x4 TB Diesel Mec"
+		},
+		{
+			"codigo": 2281,
+			"nome": "MR-2 Turbo 2.0"
+		},
+		{
+			"codigo": 2282,
+			"nome": "Paseo"
+		},
+		{
+			"codigo": 2283,
+			"nome": "Previa LE 2.4 16V"
+		},
+		{
+			"codigo": 2284,
+			"nome": "Previa LX 2.5"
+		},
+		{
+			"codigo": 10044,
+			"nome": "PRIUS 1.8 16V 5p Aut. (Híbrido)"
+		},
+		{
+			"codigo": 6470,
+			"nome": "RAV4 2.0 4x2 16V Aut."
+		},
+		{
+			"codigo": 2285,
+			"nome": "RAV4 2.0 4x4 16V Aut."
+		},
+		{
+			"codigo": 2286,
+			"nome": "RAV4 2.0 4x4 16V Mec."
+		},
+		{
+			"codigo": 7124,
+			"nome": "RAV4 2.0 HIGH 4x2 16V Aut."
+		},
+		{
+			"codigo": 7215,
+			"nome": "RAV4 2.0 TOP 4x2 16V Aut."
+		},
+		{
+			"codigo": 5431,
+			"nome": "RAV4 2.4 4x2 16V 170cv Aut."
+		},
+		{
+			"codigo": 3977,
+			"nome": "RAV4 2.4 4x4 16V 170cv Aut."
+		},
+		{
+			"codigo": 6471,
+			"nome": "RAV4 2.5 4x4 16V Aut."
+		},
+		{
+			"codigo": 10056,
+			"nome": "RAV4 2.5 S 4x4  Aut. (Híbrido)"
+		},
+		{
+			"codigo": 10057,
+			"nome": "RAV4 2.5 S Connect 4x4  Aut. (Híbrido)"
+		},
+		{
+			"codigo": 10058,
+			"nome": "RAV4 2.5 SX 4x4  Aut. (Híbrido)"
+		},
+		{
+			"codigo": 10059,
+			"nome": "RAV4 2.5 SX Connect 4x4  Aut. (Híbrido)"
+		},
+		{
+			"codigo": 2287,
+			"nome": "Supra"
+		},
+		{
+			"codigo": 2288,
+			"nome": "T-100 3.4 V6"
+		},
+		{
+			"codigo": 9216,
+			"nome": "YARIS S 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8358,
+			"nome": "YARIS XL 1.3 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8359,
+			"nome": "YARIS XL 1.3 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 9726,
+			"nome": "YARIS XL 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8932,
+			"nome": "YARIS XL Live 1.3 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8933,
+			"nome": "YARIS XL Live 1.3 Flex 16V 5p Mec."
+		},
+		{
+			"codigo": 8934,
+			"nome": "YARIS XL Live Sedan 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 8935,
+			"nome": "YARIS XL Live Sedan 1.5 Flex 16V 4p Mec."
+		},
+		{
+			"codigo": 8936,
+			"nome": "YARIS XL Plus Con. 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8937,
+			"nome": "YARIS XL Plus Con. Sed. 1.5 Flex 16V Aut"
+		},
+		{
+			"codigo": 8360,
+			"nome": "YARIS XL Plus T. Sed. 1.5 Flex 16V Aut."
+		},
+		{
+			"codigo": 8361,
+			"nome": "YARIS XL Plus Tech 1.3 Flex 16V Aut."
+		},
+		{
+			"codigo": 8362,
+			"nome": "YARIS XL Sedan 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 8363,
+			"nome": "YARIS XL Sedan 1.5 Flex 16V 4p Mec."
+		},
+		{
+			"codigo": 8364,
+			"nome": "YARIS XLS 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8938,
+			"nome": "YARIS XLS Connect 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8939,
+			"nome": "YARIS XLS Connect Sed. 1.5 Flex 16V Aut."
+		},
+		{
+			"codigo": 8365,
+			"nome": "YARIS XLS Sedan 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 8366,
+			"nome": "YARIS XS 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8940,
+			"nome": "YARIS XS Connect 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8941,
+			"nome": "YARIS XS Connect Sedan 1.5 Flex 16V Aut."
+		},
+		{
+			"codigo": 8367,
+			"nome": "YARIS XS Sedan 1.5 Flex 16V 4p Aut."
+		},
+		{
+			"codigo": 8638,
+			"nome": "YARIS X-WAY 1.5 Flex 16V 5p Aut."
+		},
+		{
+			"codigo": 8942,
+			"nome": "YARIS X-WAY Connect 1.5 Flex 16V 5p Aut."
+		}
+	],
+	"anos": [
+		{
+			"codigo": "32000-1",
+			"nome": "32000 Gasolina"
+		},
+		{
+			"codigo": "32000-3",
+			"nome": "32000 Diesel"
+		},
+		{
+			"codigo": "2024-1",
+			"nome": "2024 Gasolina"
+		},
+		{
+			"codigo": "2024-3",
+			"nome": "2024 Diesel"
+		},
+		{
+			"codigo": "2023-1",
+			"nome": "2023 Gasolina"
+		},
+		{
+			"codigo": "2023-3",
+			"nome": "2023 Diesel"
+		},
+		{
+			"codigo": "2022-1",
+			"nome": "2022 Gasolina"
+		},
+		{
+			"codigo": "2022-3",
+			"nome": "2022 Diesel"
+		},
+		{
+			"codigo": "2021-1",
+			"nome": "2021 Gasolina"
+		},
+		{
+			"codigo": "2021-3",
+			"nome": "2021 Diesel"
+		},
+		{
+			"codigo": "2020-1",
+			"nome": "2020 Gasolina"
+		},
+		{
+			"codigo": "2020-3",
+			"nome": "2020 Diesel"
+		},
+		{
+			"codigo": "2019-1",
+			"nome": "2019 Gasolina"
+		},
+		{
+			"codigo": "2019-3",
+			"nome": "2019 Diesel"
+		},
+		{
+			"codigo": "2018-1",
+			"nome": "2018 Gasolina"
+		},
+		{
+			"codigo": "2018-3",
+			"nome": "2018 Diesel"
+		},
+		{
+			"codigo": "2017-1",
+			"nome": "2017 Gasolina"
+		},
+		{
+			"codigo": "2017-3",
+			"nome": "2017 Diesel"
+		},
+		{
+			"codigo": "2016-1",
+			"nome": "2016 Gasolina"
+		},
+		{
+			"codigo": "2016-3",
+			"nome": "2016 Diesel"
+		},
+		{
+			"codigo": "2015-1",
+			"nome": "2015 Gasolina"
+		},
+		{
+			"codigo": "2015-3",
+			"nome": "2015 Diesel"
+		},
+		{
+			"codigo": "2014-1",
+			"nome": "2014 Gasolina"
+		},
+		{
+			"codigo": "2014-3",
+			"nome": "2014 Diesel"
+		},
+		{
+			"codigo": "2013-1",
+			"nome": "2013 Gasolina"
+		},
+		{
+			"codigo": "2013-3",
+			"nome": "2013 Diesel"
+		},
+		{
+			"codigo": "2012-1",
+			"nome": "2012 Gasolina"
+		},
+		{
+			"codigo": "2012-3",
+			"nome": "2012 Diesel"
+		},
+		{
+			"codigo": "2011-1",
+			"nome": "2011 Gasolina"
+		},
+		{
+			"codigo": "2011-3",
+			"nome": "2011 Diesel"
+		},
+		{
+			"codigo": "2010-1",
+			"nome": "2010 Gasolina"
+		},
+		{
+			"codigo": "2010-3",
+			"nome": "2010 Diesel"
+		},
+		{
+			"codigo": "2009-1",
+			"nome": "2009 Gasolina"
+		},
+		{
+			"codigo": "2009-3",
+			"nome": "2009 Diesel"
+		},
+		{
+			"codigo": "2008-1",
+			"nome": "2008 Gasolina"
+		},
+		{
+			"codigo": "2008-3",
+			"nome": "2008 Diesel"
+		},
+		{
+			"codigo": "2007-1",
+			"nome": "2007 Gasolina"
+		},
+		{
+			"codigo": "2007-3",
+			"nome": "2007 Diesel"
+		},
+		{
+			"codigo": "2006-1",
+			"nome": "2006 Gasolina"
+		},
+		{
+			"codigo": "2006-3",
+			"nome": "2006 Diesel"
+		},
+		{
+			"codigo": "2005-1",
+			"nome": "2005 Gasolina"
+		},
+		{
+			"codigo": "2005-3",
+			"nome": "2005 Diesel"
+		},
+		{
+			"codigo": "2004-1",
+			"nome": "2004 Gasolina"
+		},
+		{
+			"codigo": "2004-3",
+			"nome": "2004 Diesel"
+		},
+		{
+			"codigo": "2003-1",
+			"nome": "2003 Gasolina"
+		},
+		{
+			"codigo": "2003-3",
+			"nome": "2003 Diesel"
+		},
+		{
+			"codigo": "2002-1",
+			"nome": "2002 Gasolina"
+		},
+		{
+			"codigo": "2002-3",
+			"nome": "2002 Diesel"
+		},
+		{
+			"codigo": "2001-1",
+			"nome": "2001 Gasolina"
+		},
+		{
+			"codigo": "2001-3",
+			"nome": "2001 Diesel"
+		},
+		{
+			"codigo": "2000-1",
+			"nome": "2000 Gasolina"
+		},
+		{
+			"codigo": "2000-3",
+			"nome": "2000 Diesel"
+		},
+		{
+			"codigo": "1999-1",
+			"nome": "1999 Gasolina"
+		},
+		{
+			"codigo": "1999-3",
+			"nome": "1999 Diesel"
+		},
+		{
+			"codigo": "1998-1",
+			"nome": "1998 Gasolina"
+		},
+		{
+			"codigo": "1998-3",
+			"nome": "1998 Diesel"
+		},
+		{
+			"codigo": "1997-1",
+			"nome": "1997 Gasolina"
+		},
+		{
+			"codigo": "1997-3",
+			"nome": "1997 Diesel"
+		},
+		{
+			"codigo": "1996-1",
+			"nome": "1996 Gasolina"
+		},
+		{
+			"codigo": "1996-3",
+			"nome": "1996 Diesel"
+		},
+		{
+			"codigo": "1995-1",
+			"nome": "1995 Gasolina"
+		},
+		{
+			"codigo": "1995-3",
+			"nome": "1995 Diesel"
+		},
+		{
+			"codigo": "1994-1",
+			"nome": "1994 Gasolina"
+		},
+		{
+			"codigo": "1994-3",
+			"nome": "1994 Diesel"
+		},
+		{
+			"codigo": "1993-1",
+			"nome": "1993 Gasolina"
+		},
+		{
+			"codigo": "1993-3",
+			"nome": "1993 Diesel"
+		},
+		{
+			"codigo": "1992-1",
+			"nome": "1992 Gasolina"
+		},
+		{
+			"codigo": "1992-3",
+			"nome": "1992 Diesel"
+		},
+		{
+			"codigo": "1991-1",
+			"nome": "1991 Gasolina"
+		},
+		{
+			"codigo": "1991-3",
+			"nome": "1991 Diesel"
+		},
+		{
+			"codigo": "1990-3",
+			"nome": "1990 Diesel"
+		},
+		{
+			"codigo": "1989-3",
+			"nome": "1989 Diesel"
+		},
+		{
+			"codigo": "1988-3",
+			"nome": "1988 Diesel"
+		},
+		{
+			"codigo": "1987-3",
+			"nome": "1987 Diesel"
+		},
+		{
+			"codigo": "1986-3",
+			"nome": "1986 Diesel"
+		},
+		{
+			"codigo": "1985-3",
+			"nome": "1985 Diesel"
+		}
+	]
+}
